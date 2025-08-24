@@ -1,0 +1,51 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout blog source with submodules
+        uses: actions/checkout@v4
+        with:
+          path: blog
+          submodules: 'recursive'  # 关键：递归初始化子模块
+          token: ${{ secrets.PERSONAL_TOKEN }}  # 用于访问子模块
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "blog/package-lock.json"
+
+      - name: Install dependencies
+        run: |
+          cd blog
+          npm install
+          # 安装可能需要的插件
+          npm install hexo-renderer-marked --save || true
+          npm install hexo-renderer-stylus --save || true
+
+      - name: Install Hexo CLI
+        run: npm install -g hexo-cli
+
+      - name: Generate static pages
+        run: |
+          cd blog
+          hexo generate --debug
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./blog/public
+          external_repository: Meilunova/Meilunova.github.io
+          publish_branch: main
+          user_name: "Meilunova"
+          user_email: "3330876408@qq.com"
