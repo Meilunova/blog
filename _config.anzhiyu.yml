@@ -12,6 +12,7 @@ menu:
   互动:
     留言板: /comments/ || anzhiyu-icon-envelope
     友链: /link/ || anzhiyu-icon-link
+    我的收藏: /favorites/ || anzhiyu-icon-heart
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
 # nav相关配置
@@ -1070,10 +1071,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    tips: 我的收藏
+    title: 精选网站与资源
+    image: https://i.ibb.co/jsF5Hc1/6-B207802139-E328463-A576-A69-CDF9-EF6.webp
+    link: /favorites/
 
 # 朋友圈配置
 friends_vue:
