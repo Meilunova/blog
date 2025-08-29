@@ -1,13 +1,8 @@
 ---
-title: 我的收藏夹
-date: 2025-01-28
-type: favorites
-updated: 2025-01-28
-comments: true
-description: 分享我的网站收藏，包含学习资源、开发工具、娱乐网站等精选链接
-keywords: 收藏夹,网站分享,学习资源,开发工具,娱乐网站
-top_img: https://img.090227.xyz/file/ae62475a131f3734a201c.png
-aside: true
+title: 我的收藏
+date: 2025-08-29 12:45:00
+type: "favorites"
+layout: "page"
 ---
 
 <div id="favorites-container">

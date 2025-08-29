@@ -13,6 +13,7 @@ menu:
     留言板: /comments/ || anzhiyu-icon-envelope
     友链: /link/ || anzhiyu-icon-link
     我的收藏: /favorites/ || anzhiyu-icon-heart
+    音乐分享: /share/ || anzhiyu-icon-headphones
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
 # nav相关配置
